@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // test git notes_provider
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Notes");
