@@ -1,9 +1,9 @@
-package com.latihan.mynotesapp.helper;
+package com.latihan.consumerapp.helper;
 
 import android.database.Cursor;
 
-import com.latihan.mynotesapp.db.DatabaseContract;
-import com.latihan.mynotesapp.entity.Note;
+import com.latihan.consumerapp.db.DatabaseContract;
+import com.latihan.consumerapp.entity.Note;
 
 import java.util.ArrayList;
 

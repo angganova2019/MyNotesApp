@@ -1,10 +1,4 @@
-package com.latihan.mynotesapp;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.latihan.consumerapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,13 +11,18 @@ import android.os.HandlerThread;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.latihan.mynotesapp.adapter.NoteAdapter;
-import com.latihan.mynotesapp.db.DatabaseContract;
-import com.latihan.mynotesapp.db.NoteHelper;
-import com.latihan.mynotesapp.entity.Note;
-import com.latihan.mynotesapp.helper.MappingHelper;
+import com.latihan.consumerapp.adapter.NoteAdapter;
+import com.latihan.consumerapp.db.DatabaseContract;
+import com.latihan.consumerapp.entity.Note;
+import com.latihan.consumerapp.helper.MappingHelper;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
         // test git notes_provider
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Notes");
+            getSupportActionBar().setTitle("Consumer Notes");
         }
 
         rvNotes = findViewById(R.id.rv_notes);

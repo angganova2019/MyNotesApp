@@ -13,13 +13,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_TABLE_NOTE = String.format("CREATE TABLE %s"
                     + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
             " %s TEXT NON NULL," +
-            " %S TEXT NOT NULL," +
-            " %S TEXT NOT NULL)",
-            DatabaseContract.TABLE_NAME,
+            " %s TEXT NOT NULL," +
+            " %s TEXT NOT NULL)",
+            DatabaseContract.NoteColumns.TABLE_NAME,
             DatabaseContract.NoteColumns._ID,
             DatabaseContract.NoteColumns.TITLE,
-            DatabaseContract.NoteColumns.DATE,
-            DatabaseContract.NoteColumns.DESCRIPTION
+            DatabaseContract.NoteColumns.DESCRIPTION,
+            DatabaseContract.NoteColumns.DATE
     );
 
     public DatabaseHelper(Context context) {
@@ -33,7 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + DatabaseContract.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + DatabaseContract.NoteColumns.TABLE_NAME);
         onCreate(db);
     }
 }
